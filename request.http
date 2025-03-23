@@ -1,0 +1,52 @@
+### Init Lambda
+GET http://localhost:8080/initLambda
+
+### SyncUp Lambda
+POST http://localhost:8080/syncUpLambda
+Content-Type: application/json
+
+{
+  "transactionId": "8cecea27-4013-4caa-8779-50339f383ed3"
+}
+
+### PreStaging Lambda
+POST http://localhost:8080/preStagingLambda
+Content-Type: application/json
+
+{
+  "transactionId": "8cecea27-4013-4caa-8779-50339f383ed3"
+}
+
+### Staging Lambda
+POST http://localhost:8080/stagingLambda
+Content-Type: application/json
+
+{
+  "transactionId": "8cecea27-4013-4caa-8779-50339f383ed3",
+  "offset": 0,
+  "limit": 442
+}
+
+### PrePublish Lambda
+POST http://localhost:8080/prePublishLambda
+Content-Type: application/json
+
+[
+  {
+    "transactionId": "8cecea27-4013-4caa-8779-50339f383ed3",
+    "limit": 442,
+    "success": true
+  }
+]
+
+### Publish Lambda
+POST http://localhost:8080/publishLambda
+Content-Type: application/json
+
+{
+  "transactionId": "8cecea27-4013-4caa-8779-50339f383ed3",
+  "offset": 0,
+  "limit": 64
+}
+
+###

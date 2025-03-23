@@ -1,0 +1,25 @@
+{
+  "name": "data-processor",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "synth": "cdk synth -c environment=dev > data-processor-stack.yaml",
+    "deploy": "cdk deploy --require-approval never -c environment=dev",
+    "clean": "rmdir-cli dist && rmdir-cli cdk.out"
+  },
+  "devDependencies": {
+    "@types/node": "22.7.9",
+    "@types/source-map-support": "^0.5.9",
+    "aws-cdk": "2.173.4",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.3",
+    "rmdir-cli": "^2.0.6"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.173.4",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
